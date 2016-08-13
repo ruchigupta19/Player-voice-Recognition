@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quick Start Plugin Dev</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="container-fluid">
+    <h1 class='text-center'>Voice Control with web speech API and Speech speechSynthesis API</h1>
+    <video id="player"
+           data-playlist-id="5031814231001"
+           data-account="3303963094001"
+           data-player="S1i7qgVP"
+           data-embed="default"
+           class="video-js"
+           controls
+           style="width: 500px; height: 442px;"></video>
+    <script src="//players.brightcove.net/3303963094001/S1i7qgVP_default/index.min.js"></script>
+    <ol class="vjs-playlist"></ol>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th class='text-center'>COMMANDS</th>
+                            <th class='text-center'>APPLICATION</th>
+                        </tr>
+                        </thead>
+                        <tbody class='text-center'>
+                        <tr>
+                            <td>PLAY or START</td>
+                            <td>Starts the video</td>
+                        </tr>
+                        <tr>
+                            <td>STOP or PAUSE</td>
+                            <td>Stops playing the video</td>
+                        </tr>
+                        <tr>
+                            <td>NEXT</td>
+                            <td>Jumps to next video</td>
+                        </tr>
+                        <tr>
+                            <td>PREVIOUS</td>
+                            <td>Goes back to the previous video</td>
+                        </tr>
+                        <tr>
+                            <td>MUTE</td>
+                            <td>Turns off the volume</td>
+                        </tr>
+                        <tr>
+                            <td>UNMUTE</td>
+                            <td>Turns on the volume</td>
+                        </tr>
+                        <tr>
+                            <td>JUMP TO N</td>
+                            <td>Seeks the video to n seconds</td>
+                        </tr>
+                        <tr>
+                            <td>DECREASE VOLUME or VOLUME DOWN</td>
+                            <td>Decreases volume</td>
+                        </tr>
+                        <tr>
+                            <td>INCREASE VOLUME or VOLUME UP</td>
+                            <td>Increases volume</td>
+                        </tr>
+                        <tr>
+                            <td>SHARE or SHARE MY VIDEO or SHARE VIDEO</td>
+                            <td>Displays share video screen</td>
+                        </tr>
+                        <tr>
+                            <td>SHARE VIDEO ON FACEBOOK|TWITTER|GOOGLE PLUS|LINKEDIN|PINTEREST|TUMBLR or JUST SAY "FACEBOOK" ETC</td>
+                            <td>Opens respective social media website (Works only if share screen is open)</td>
+                        </tr>
+                        <tr>
+                            <td>CLOSE</td>
+                            <td>Closes share video screen</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6" id="contentRecog">
+            <div class="row">
+                <div class="allowM">
+                    <button type="button" class="btn btn-primary" onclick="allowAccessToMicrophone()"><img id="allowChat" src="chat.png" height="30px" width="40px" />Allow Access to
+                        the Microphone
+                    </button>
+                </div>
+                <div class="disableM">
+                    <button type="button" class="btn btn-primary" id = "disable"><img id="notallowChat" src="chat.png" height="30px" width="40px" />Stop Accessing the Microphone</button>
+                </div>
+
+                <script type="text/javascript" src="voice-dev.js"></script>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .video-js {
+        float: left;
+    }
+
+    .vjs-playlist {
+        width: auto;
+    }
+    .allowM {
+        float: left;
+        margin-left: 7%;
+    }
+    .disableM {
+        float: right;
+        margin-right: 7%;
+    }
+    .status {
+        color: red;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 35%;
+    }
+    .speech{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 25%;
+    }
+    .alternatives{
+        color: #555555;
+        margin-top: 20px;
+    }
+</style>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "player-voice-control",
+  "version": "1.0.0",
+  "description": "Player Voice Control Plugin",
+  "devDependencies": {
+    "http-server": "^0.8.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bithub.brightcove.com:jwalsh/player-voice-control.git"
+  },
+  "author": "Jonathon Walsh"
+}
